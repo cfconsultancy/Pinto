@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pinto by MaxLawrence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Pinto</h1>
+      <h2 class="project-tagline">Lightweight and customizable jQuery plugin for creating pinterest like responsive grid layout</h2>
+      <a href="https://github.com/MaxLawrence/Pinto" class="btn">View on GitHub</a>
+      <a href="https://github.com/MaxLawrence/Pinto/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MaxLawrence/Pinto/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="pinto-jquery-grid-layout-plugin-v100" class="anchor" href="#pinto-jquery-grid-layout-plugin-v100" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pinto jQuery Grid Layout Plugin (v1.0.0)</h1>
+
+<p><img src="https://raw.github.com/maxlawrence/pinto/master/screenshot.png" alt="preview"></p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>lightweight (1014 bytes of code)</li>
+<li>autosize support</li>
+<li>fluid item width</li>
+<li>animation (CSS3 transition)</li>
+</ul>
+
+<h1></h1>
+
+<ul>
+<li>1. <a href="#about">About</a>
+</li>
+<li>2. <a href="#how-to-use">Use</a>
+</li>
+<li>3. <a href="#demo">Demo</a>
+</li>
+<li>4. <a href="#license">License</a>
+</li>
+</ul>
+
+<h3>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>ABOUT</h3>
+
+<p>Pinto.js is a lightweight and customizable jQuery plugin for creating pinterest like responsive grid layout.
+Pinto.js is intended for easy use and is fully deployable within minutes. The minified version is under 1KB.</p>
+
+<h3>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>HOW TO USE</h3>
+
+<p>Pinto.js was built with quick and simple customization in mind. You can easily customize the entire experience by initializing with arguments. </p>
+
+<p>Example:</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">'</span>#container<span class="pl-pds">'</span></span>).pinto();</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>Example:</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">'</span>#container<span class="pl-pds">'</span></span>).pinto({</span>
+<span class="pl-s1">        itemSelector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>.block<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">        itemWidth<span class="pl-k">:</span> <span class="pl-c1">200</span>,         </span>
+<span class="pl-s1">        marginX<span class="pl-k">:</span> <span class="pl-c1">10</span>,                </span>
+<span class="pl-s1">        marginY<span class="pl-k">:</span> <span class="pl-c1">10</span>,                </span>
+<span class="pl-s1">        align<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>center<span class="pl-pds">'</span></span>,                </span>
+<span class="pl-s1">        fitWidth<span class="pl-k">:</span> <span class="pl-c1">false</span>,                </span>
+<span class="pl-s1">        animate<span class="pl-k">:</span> <span class="pl-c1">true</span>,               </span>
+<span class="pl-s1">        autoResize<span class="pl-k">:</span> <span class="pl-c1">true</span>,           </span>
+<span class="pl-s1">        resizeDelay<span class="pl-k">:</span> <span class="pl-c1">50</span></span>
+<span class="pl-s1">    });</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>Default options:</p>
+
+<div class="highlight highlight-JavaScript"><pre>    itemSelector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&gt; div<span class="pl-pds">'</span></span>,      <span class="pl-c">// block identificator;</span>
+    itemWidth<span class="pl-k">:</span> <span class="pl-c1">220</span>,             <span class="pl-c">// width of one grid block in pixels;</span>
+    marginX<span class="pl-k">:</span> <span class="pl-c1">10</span>,                <span class="pl-c">// width spacing between blocks in pixels;</span>
+    marginY<span class="pl-k">:</span> <span class="pl-c1">10</span>,                <span class="pl-c">// height spacing between blocks in pixels;</span>
+    align<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>left<span class="pl-pds">'</span></span>,              <span class="pl-c">// blocks alignment - 'left', 'right' or 'center';</span>
+    fitWidth<span class="pl-k">:</span> <span class="pl-c1">true</span>,             <span class="pl-c">// adjusts block width to create optimal layout based on container size;</span>
+    animate<span class="pl-k">:</span> <span class="pl-c1">true</span>,              <span class="pl-c">// CSS animation when updating layout; </span>
+    autoResize<span class="pl-k">:</span> <span class="pl-c1">true</span>,           <span class="pl-c">// updates layout after browser is resized;</span>
+    resizeDelay<span class="pl-k">:</span> <span class="pl-c1">50</span>             <span class="pl-c">// time in milliseconds between browser resize and layout update;</span></pre></div>
+
+<h3>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>DEMO</h3>
+
+<p>Download repository and view the demo folder with an example.</p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE</h3>
+
+<p>Released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a></p>
+
+<hr>
+
+<p>Copyright <img class="emoji" title=":copyright:" alt=":copyright:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/00a9.png" height="20" width="20" align="absmiddle"> 2015 Max Lawrence</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MaxLawrence/Pinto">Pinto</a> is maintained by <a href="https://github.com/MaxLawrence">MaxLawrence</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
