@@ -8,7 +8,7 @@
 	<meta name="author" content="Max Lawrence">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="js/jquery-1.7.js" type="text/javascript"></script>
-    <script src="../pinto.min.js" type="text/javascript"></script>
+    <script src="../pinto.js" type="text/javascript"></script>
 	<style type="text/css">
 	body {
 		background: #222 url(./images/wood.jpg);
@@ -35,7 +35,7 @@
 		width: 100%;
 		margin: auto;
     }
-    .block {
+    #container > div {
 		-webkit-box-shadow: 0 4px 15px -5px #555;
 		box-shadow: 0 4px 15px -5px #555;
 		background-color: #fff;
@@ -43,10 +43,10 @@
 		padding:2px;
 		margin:5px;
 	}
-	.block img {
+	#container > div img {
 		padding: 0px;
 		display: block;
-		width:100%;
+		width: 100%;
 	}
   </style>
 </head>

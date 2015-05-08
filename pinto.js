@@ -4,7 +4,7 @@
   @description Lightweight and customizable jQuery plugin for creating pinterest like responsive grid layout
   @author Max Lawrence 
   @version 1.0.0
-  @date 06.05.2015
+  @date 08.05.2015
   @category jQuery plugin
   @copyright (c) 2015 Max Lawrence (http://www.topbits.net)
   @license Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
@@ -79,6 +79,11 @@
 				
 				cols[i] += $item.innerHeight() + marginY;
             });
+			
+			var height=0;
+			i = colsCount;
+			while(i--) if(cols[i]>height) height = cols[i];
+			$this.css({height:height});
 		};
 		
 		var onResizeTimer = null;
